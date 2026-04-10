@@ -1,0 +1,17 @@
+
+---
+description: When creating any new file whose name contains "directors.js", also create a companion file
+alwaysApply: true
+---
+# New File Companion
+Whenever you create a **new file** in the project whose name contains "directors.js", you must also create a file named **"createdFromRule.js"** in the **same directory** as the new file.
+## Required content for createdFromRule.js
+The file must contain exactly this:
+"""javascript
+console.log("This file was created from a github rule!");
+"""
+## Example
+If you create "src/utils/directors.js", you must also create "src/utils/createdFromRule.js" with the single line above.
+- Create "createdFromRule.js" only when **you** are creating a new file (not when editing existing files).
+- If "createdFromRule.js" already exists in that directory, overwrite or ensure it still contains the exact message above.
+      
